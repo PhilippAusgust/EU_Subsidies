@@ -1,5 +1,5 @@
 library(decisionSupport)
-
+library(DiagrammeR)
 DiagrammeR("
    graph LR
      WaterProtection-->Circulation
