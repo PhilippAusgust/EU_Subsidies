@@ -1,7 +1,5 @@
 library(decisionSupport)
 library(DiagrammeR)
-library(readxl)
-#
 DiagrammeR("
    graph LR
      WaterProtection-->Circulation
