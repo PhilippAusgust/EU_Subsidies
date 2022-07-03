@@ -33,7 +33,7 @@ View(inputfile_wheat)
 
 #create data frame with input table. 
 
-input_estimates_wheat <- data.frame(variable = c("Yield", "Price", "seeding_and_fertilizer_costs", "costs_pesticides","costs_machinery","hail_insurance"),
+input_estimates_wheat <- data.frame(variable = c("Yield", "Price", "seeding_and_fertilizer_costs", "costs_pesticides","costs_machinery","hail_insurance","eu_sub"),
                               lower =inputfile_wheat$lower ,
                               median = inputfile_wheat$median,
                               upper = inputfile_wheat$upper,
@@ -55,6 +55,11 @@ modelfunction_wheat <- function(){
   total_effort <- seeding_and_fertilizer_costs+costs_pesticides+costs_machinery+hail_insurance
   
   profit_margin  <- total_turnover- total_effort
+  
+  if(eu_sub==FALSE){ profit_margin <- profit_margin +150
+                    total_turnover <- total_turnover * 0.96
+                    }
+  
   
   return(list(profit_margin = profit_margin))
   }
@@ -132,7 +137,7 @@ for(i in colnames(x)) assign(i,
 
 make_variables(as.estimate(input_estimates_wheat))
 
-Yield
+seeding_and_fertilizer_costs
 
 # in german: Funktion um einen Wert aus der generierten MC Simulation zu picken
 # Im Weiteren kann auf die Erzeugten Variablen dann über die sog. Hilfsfunktion "make_variables" zugegriffen werden. 
