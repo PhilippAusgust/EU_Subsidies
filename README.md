@@ -15,5 +15,5 @@ If any of you are also interested in this topic, please feel free to contact us.
 
 
 
-![image info](./chart_1.jpg)
+![image info](./aktueller_chart.jpeg)
 

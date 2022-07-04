@@ -56,7 +56,7 @@ modelfunction_wheat <- function(){
   
   profit_margin  <- total_turnover- total_effort
   
-  if(eu_sub==FALSE){ profit_margin <- profit_margin +150
+  if(eu_sub==TRUE){ profit_margin <- profit_margin +150
                     total_turnover <- total_turnover * 0.96
                     }
   
