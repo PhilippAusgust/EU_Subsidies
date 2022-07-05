@@ -52,7 +52,7 @@ DiagrammeR("
            ww(water_protection)--> B
            pgl(permanent_grass_land)-->B
            
-           ef(each_fiels<5 ha)-->M
+           ef(each_field<5 ha)-->M
            
            
            p(market_price)-->I
