@@ -146,7 +146,7 @@ mcSimulation_results <- decisionSupport::mcSimulation(
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
                                     vars = c("NPV_subsidies", "NPV_no_subsidies"),
                                     method = 'smooth_simple_overlay', 
-                                    base_size = 7)
+                                    base_size = 7) 
 
     
     
