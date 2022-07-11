@@ -4,7 +4,7 @@ library(readr)
 
 input_table <- read.csv2("Input_new.csv")
 input_table
-View(input_table)
+#View(input_table)
 
 
 subsidies_decision_function <- function(x, varnames){
@@ -103,13 +103,13 @@ subsidies_decision_function <- function(x, varnames){
     if(get_eu_subsidies){ 
       
       total_benefits <-  benefits_eu_subsidies + farming_area_*(wheat_price*wheat_yield)
-      net_subsidies <-  total_benefits - (costs_fer_seeds +costs_pest+costs_machy +costs_insur)- opportunity_costs_subsedies
+      net_subsidies <-  total_benefits - farming_area_*(costs_fer_seeds +costs_pest+costs_machy +costs_insur)- opportunity_costs_subsedies
       
     }
     
     else{
       
-      net_no_subsidies <-  farming_area_*(wheat_price*wheat_yield) -(costs_fer_seeds +costs_pest+costs_machy +costs_insur)
+      net_no_subsidies <-  farming_area_*(wheat_price*wheat_yield) -farming_area_*(costs_fer_seeds +costs_pest+costs_machy +costs_insur)
       
     
     }
