@@ -17,5 +17,5 @@ One aspect of this issue is whether these regulations really have a positive imp
 
 
 
-![image info](./aktueller_chart.jpeg)
+![image info](./Final_plot.jpeg)
 
