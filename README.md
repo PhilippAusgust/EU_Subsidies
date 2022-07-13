@@ -20,13 +20,13 @@ The aim of the new CAP is to make agriculture sustainable and climate-friendly. 
 Small farms are also to be strengthened. Furthermore, the EU member states should be given more flexibility to adapt their domestic agricultural policies to local conditions. 
 
 
-###Change of the subsidy payment
+###### Change of the subsidy payment
 
 
 In order to achieve the newly set goals, there will be a change in the payment of EU subsidies. Until now, only the requirements of the fertilizer regulation in Germany had to be met in order to receive subsidies.  Environmental requirements and thus agronomic measures were not linked to the payment of subsidies. Also, the basis premiums were reduced by almost 60%. 
 
 
-### Principle of "conditionality
+###### Principle of conditionality
 
 In the new CAP, the principle of "conditionality" is planned. 
 This means that in the future, EU subsidies will only be paid out if conditions are fulfilled. These conditions can severely restrict the farmer in his agronomic possibilities and can have a strong impact on the farm's success. 
