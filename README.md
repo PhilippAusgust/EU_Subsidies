@@ -54,7 +54,7 @@ In order to receive both premiums, costs are incurred under the principle of con
 
 This section illustrates this. 
 
-![image info](./section_sub.jepg)
+![image info](./section_sub.jpeg)
 
 Red colored are the costs, which can be regarded as general production costs.
 
