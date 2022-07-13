@@ -54,7 +54,7 @@ In order to receive both premiums, costs are incurred under the principle of con
 
 This section illustrates this. 
 
-![image info](./section_sub.jpeg)
+![image info](./Chart_1.jpeg)
 
 Red colored are the costs, which can be regarded as general production costs.
 
@@ -67,5 +67,5 @@ The model function is executed twice. Once the receipt of subsidies is simulated
 
 
 
-![image info](./chart_final_new.jpeg)
+![image info](./Chart.jpeg)
 

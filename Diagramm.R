@@ -1,6 +1,8 @@
 library(decisionSupport)
 library(DiagrammeR)
-#help(DiagrammeR)
+
+help(DiagrammeR)
+help("graph LR")
 
 #Previous Diagram ####
 
@@ -26,7 +28,7 @@ library(DiagrammeR)
 # 
 
 
-#Final Diagram ####
+#Final Diagram Main ####
 
 DiagrammeR("
            
@@ -37,19 +39,19 @@ DiagrammeR("
            BB(basic_subsidies)-->S
            
            MM(small_fields_subsidies)-->S
-           B(basic_subsidies_costs)-->BB
+           B(costs_basic_subsidies)-->BB
            
-           r(4%_costs_shutdown)-->B
-           k(conversation_tillage)-->B
-           ww(costs_water_protection)--> B
-           pgl(costs_cns_tillage)-->B
+           r(costs_4%_shutdown)-.->B
+           k(costs_conversation_tillage)-.->B
+           ww(costs_water_protection)-.-> B
+     
            
            M(costs_field_area_<_5_ha)-->MM
-           ef(more_cultivation_costs)-->M
+           ef(costs_more_cultivation)-.->M
            
            
-           CC(consulting_costs) --> S
-           OE(own_effort)--> S
+           CC(costs_consulting) -.-> S
+           OE(costs_own_effort)-.-> S
            
            p(market_price)-->I
            YI(Yield)-->I
@@ -60,18 +62,17 @@ DiagrammeR("
            
            c(costs)-->I
            
-           saf(seeding_and_fertilizer_costs)-->c
+           saf(costs_seeding_and_fertilizer)-->c
            cp(costs_pesticides)-->c
            cm(costs_machinery)-->c
-           hi(hail_insurance)-->c
+           hi(costs_hail_insurance)-->c
            
 
            
-           style S fill:lightgreen, stroke:#333,stroke-width:2px;
+           style S fill:lightgreen, stroke:#0000ff,stroke-width:3px;
            style r fill:orange, stroke:#333,stroke-width:2px;
            style k fill:orange, stroke:#333,stroke-width:2px;
            style ww fill:orange, stroke:#333,stroke-width:2px;
-           style pgl fill:orange, stroke:#333,stroke-width:2px;
            style ef fill:orange, stroke:#333,stroke-width:2px;
            style CC fill:orange, stroke:#333,stroke-width:2px;
            style OE fill:orange, stroke:#333,stroke-width:2px;
@@ -79,11 +80,108 @@ DiagrammeR("
            style B fill:pink, stroke:#333,stroke-width:2px;
            style BB fill:lightgrey, stroke:#333,stroke-width:2px;
            style MM fill:lightgrey, stroke:#333,stroke-width:2px;
-           style saf   fill:red, stroke:#333,stroke-width:2px;
-           style cp    fill:red, stroke:#333,stroke-width:2px;
-           style cm    fill:red, stroke:#333,stroke-width:2px;
-           style c     fill:red, stroke:#333,stroke-width:2px;
-           style hi    fill:red, stroke:#333,stroke-width:2px;
+           style saf fill:orangered, stroke:#333,stroke-width:2px;
+           style cp fill:orangered, stroke:#333,stroke-width:2px;
+           style cm fill:orangered, stroke:#333,stroke-width:2px;
+           style c  fill:orangered, stroke:#333,stroke-width:2px;
+           style hi fill:orangered, stroke:#333,stroke-width:2px;
            style costs_for_eu_subsidies    fill:orange;
-           style general_production_costs    fill:red;
+           style general_production_costs    fill:orangered;
            ")
+
+
+
+
+
+
+
+
+
+#Final Diagram Subsection Subsidies ####
+
+
+DiagrammeR("
+           
+           graph LR
+           
+
+           
+           BB(basic_subsidies)-->S(Subsidies)
+           
+           MM(small_fields_subsidies)-->S
+           B(basic_subsidies_costs)-->BB
+           
+           r(costs_4%_shutdown)-.->B
+           k(costs_conversation_tillage)-.->B
+           ww(costs_water_protection)-.-> B
+           
+           
+           M(costs_field_area_<_5_ha)-->MM
+           ef(costs_more_cultivation)-->M
+           
+           
+           CC(costs_consulting) -.-> S
+           OE(costs_own_effort)-.-> S
+
+           
+           style S fill:lightgreen, stroke:#0000ff,stroke-width:3px;
+           style r fill:orange, stroke:#333,stroke-width:2px;
+           style k fill:orange, stroke:#333,stroke-width:2px;
+           style ww fill:orange, stroke:#333,stroke-width:2px;
+           
+           style ef fill:orange, stroke:#333,stroke-width:2px;
+           style CC fill:orange, stroke:#333,stroke-width:2px;
+           style OE fill:orange, stroke:#333,stroke-width:2px;
+           style M fill:pink, stroke:#333,stroke-width:2px;
+           style B fill:pink, stroke:#333,stroke-width:2px;
+           style BB fill:lightgrey, stroke:#333,stroke-width:2px;
+           style MM fill:lightgrey, stroke:#333,stroke-width:2px;
+           
+           style costs_for_eu_subsidies    fill:orange;
+          
+           ")
+
+
+
+
+#Final Diagram Subsection Costs ####
+
+
+DiagrammeR("
+           
+           graph LR
+         
+           
+           
+           
+           
+           
+           
+           
+          
+           
+           saf(seeding_and_fertilizer_costs)-->c(general_costs)
+           cp(costs_pesticides)-->c
+           cm(costs_machinery)-->c
+           hi(hail_insurance)-->c
+           
+
+           
+           
+           style saf fill:orangered, stroke:#333,stroke-width:2px;
+           style cp fill:orangered, stroke:#333,stroke-width:2px;
+           style cm fill:orangered, stroke:#333,stroke-width:2px;
+           style c  fill:orangered, stroke:#333,stroke-width:2px;
+           style hi fill:orangered, stroke:#333,stroke-width:2px;
+          
+           style general_production_costs    fill:orangered;
+           ")
+
+
+
+
+
+
+
+
+
