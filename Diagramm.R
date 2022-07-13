@@ -48,6 +48,9 @@ DiagrammeR("
            ef(more_cultivation_costs)-->M
            
            
+           CC(consulting_costs) --> S
+           OE(own_effort)--> S
+           
            p(market_price)-->I
            YI(Yield)-->I
            
@@ -70,6 +73,8 @@ DiagrammeR("
            style ww fill:orange, stroke:#333,stroke-width:2px;
            style pgl fill:orange, stroke:#333,stroke-width:2px;
            style ef fill:orange, stroke:#333,stroke-width:2px;
+           style CC fill:orange, stroke:#333,stroke-width:2px;
+           style OE fill:orange, stroke:#333,stroke-width:2px;
            style M fill:pink, stroke:#333,stroke-width:2px;
            style B fill:pink, stroke:#333,stroke-width:2px;
            style BB fill:lightgrey, stroke:#333,stroke-width:2px;
@@ -79,4 +84,6 @@ DiagrammeR("
            style cm    fill:red, stroke:#333,stroke-width:2px;
            style c     fill:red, stroke:#333,stroke-width:2px;
            style hi    fill:red, stroke:#333,stroke-width:2px;
+           style costs_for_eu_subsidies    fill:orange;
+           style general_production_costs    fill:red;
            ")

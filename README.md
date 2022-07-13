@@ -41,9 +41,31 @@ To answer this question, many factors, often unpredictable, must be considered.
 
 For one thing, production conditions change very quickly. Prices for fertilizer, machinery, seeds, crop protection, fuel are currently subject to extreme fluctuations.  These can be subject to very rapid changes due to wars or crises such as the Corona pandemic. 
 Likewise, the yield can change quickly due to a changing climate and the yield level is not stable.  
+Furthermore, the prices that farmers pay for their products are not stable and are subject to sharp price jumps. Here, a look at the past shows that prices can rise or fall within a very short period of time. 
+Depending on the uncertainties described here, mandatory measures that must be implemented in the future in order to receive subsidies will have a differentiated impact on the success of each farm. 
+
+
+## Flow Chart 
+
+
+The chart below outlines a scenario in which the farmer chooses to receive the base premium and the premium paid for a maximum field size. 
+
+In order to receive both premiums, costs are incurred under the principle of conditionality. This cost is incurred through agronomic cuts. The costs are colored orange. 
+
+This section illustrates this. 
+
+![image info](./section_sub.jepg)
+
+Red colored are the costs, which can be regarded as general production costs.
+
+
+## Model function
+
+The model function is executed twice. Once the receipt of subsidies is simulated and the expected profit is calculated under the premise that subsidies are paid and the necessary cuts and their costs are accepted. In the second variant, only the profit to be expected if no subsidies are paid is calculated. It should be noted here that in this case there are also no costs for the subsidies
 
 
 
 
-![image info](./Final_plot.jpeg)
+
+![image info](./chart_final_new.jpeg)
 
