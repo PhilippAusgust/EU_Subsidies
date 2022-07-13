@@ -67,5 +67,5 @@ The model function is executed twice. Once the receipt of subsidies is simulated
 
 
 
-![image info](./Chart.jpeg)
+![image info](./Plot_concept.jpeg)
 
