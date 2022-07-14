@@ -1,1 +1,20 @@
-description;label;variable;distribution;lower;median;upperperiod_subsidies_recived;time_horizon;n_years;const;6.00;NA;6.00Coefficient of variation, ratio of the standard deviation to the mean (a measure of relative variability).;coeff. Variation;var_CV;posnorm;0.08;NA;0.12reduce yield/loss by discount_rate % over time;discount rate;discount_rate;posnorm;1.00;NA;5.00farm size;ha/year;farm_size;const;100.00;NA;100.00price for wheat;Euro/dt;price_wheat;posnorm;15.50;NA;33.50wheat yield;dt/ha;yield_wheat;posnorm;50.00;NA;110.00seeding and fertilizer costs;Euro/ha;seeding_fertilizer_costs;posnorm;175.00;NA;240.00costs for plant protection;Euro/ha;costs_pesticides;posnorm;175.00;NA;240.00costs for machinery;Euro/ha;costs_machinery;posnorm;160.00;NA;190.00cost for insurance;Euro/ha;hail_insurance;posnorm;10.00;NA;12.00basic eu subsidies;Euro/ha;eu_subsidies;const;150.00;NA;150.00Own effort to fill in documents ;Euro/ha;own_efforts_costs;posnorm;3.00;NA;5.00Consulting costs for application to get subsidies;Euro/ha;cunsult_costs;posnorm;0.80;NA;2.00Costs for shut down of 4 percent of the farm's arable land ;Euro/ha;costs_shutdown;posnorm;20.00;NA;40.00Costs to protect water conservation areas;Euro/ha;costs_water_protection;posnorm;5.00;NA;10.00Costs for conservation tillage, which cause stronger weed growth in the spring;Euro/ha;costs_cns_tillage;posnorm;15.00;NA;25.00field_area_<_5_ha_subsidies;Euro/ha;small_fields;const;25.00;NA;25.00more_costly_cultivation_due_to_smaller_fields;Euro/ha;more_cultivation_costs;posnorm;10.00;NA;17.00saved_greening_costs, because greening is not necessary;Euro/ha;saved_greening_costs;posnorm;5.00;NA;14.00risk of  planning and not finally submitting Application for subsidies ;;risk_;posnorm;0.0005;NA;0.0015
+description;label;variable;distribution;lower;median;upper
+period_subsidies_recived;time_horizon;n_years;const;6.00;NA;6.00
+Coefficient of variation, ratio of the standard deviation to the mean (a measure of relative variability).;coeff. Variation;var_CV;posnorm;8.00;NA;12.00
+reduce yield/loss by discount_rate % over time;discount rate;discount_rate;posnorm;1.00;NA;2.00
+farm size;ha/year farm size;farm_size;const;100.00;NA;100.00
+price for wheat;Euro/dt price for wheat;price_wheat;posnorm;15.50;NA;33.50
+wheat yield;dt/ha wheat yield;yield_wheat;posnorm;50.00;NA;110.00
+seeding and fertilizer costs;Euro/ha_Seeding_costs;seeding_fertilizer_costs;posnorm;238.00;NA;301.00
+costs for plant protection;Euro/ha costs for plant protection;costs_pesticides;posnorm;175.00;NA;240.00
+costs for machinery;Euro/ha costs for machinery;costs_machinery;posnorm;160.00;NA;190.00
+cost for insurance;Euro/ha cost for insurance;hail_insurance;posnorm;10.00;NA;12.00
+basic eu subsidies;Euro/ha basic eu subsidies;eu_subsidies;const;150.00;NA;150.00
+Own effort to fill in documents ;Euro/ha Own effort to fill in documents;own_efforts_costs;posnorm;3.00;NA;5.00
+Consulting costs for application to get subsidies;Euro/ha Consulting costs for application to get subsidies;cunsult_costs;posnorm;0.80;NA;2.00
+Costs for shut down of 4 percent of the farm's arable land ;Euro/ha Costs for shut down of 4 percent of the farm's arable land ;costs_shutdown;posnorm;20.00;NA;40.00
+Costs to protect water conservation areas;Euro/ha Costs to protect water conservation areas;costs_water_protection;posnorm;5.00;NA;10.00
+Costs for conservation tillage, which cause stronger weed growth in the spring;Euro/ha Costs for conservation tillage, which cause stronger weed growth in the spring;costs_cns_tillage;posnorm;15.00;NA;25.00
+field_area_<_5_ha_subsidies;Euro/hafield_area_<_5_ha_subsidies;small_fields;const;25.00;NA;25.00
+more_costly_cultivation_due_to_smaller_fields;Euro/ha more_costly_cultivation_due_to_smaller_fields;more_cultivation_costs;posnorm;10.00;NA;17.00
+risk of planning and not finally submitting Application for subsidies ;;risk_;posnorm;0.0005;NA;0.0015

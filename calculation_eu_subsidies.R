@@ -6,10 +6,10 @@ input_table <- read.csv2("Input_new.csv")
 input_table
 #View(input_table)
 
-
+#Build_Function ####
 subsidies_decision_function <- function(x, varnames){
   
-  # definde arrays with constant distribution
+  # define arrays with constant distribution
   farming_area_               <- rep(farm_size, n_years)
   eu_subsidies_basic          <- rep(eu_subsidies, n_years)
   eu_subsidies_small_fields   <- rep(small_fields, n_years)
@@ -103,7 +103,7 @@ subsidies_decision_function <- function(x, varnames){
     if(get_eu_subsidies){ 
       
       total_benefits <-  benefits_eu_subsidies + farming_area_*(wheat_price*wheat_yield)
-      net_subsidies <-  total_benefits - farming_area_*(costs_fer_seeds +costs_pest+costs_machy +costs_insur)- opportunity_costs_subsedies
+      net_subsidies <-  total_benefits - farming_area_* (costs_fer_seeds +costs_pest+costs_machy +costs_insur)- opportunity_costs_subsedies
       
     }
     
@@ -127,14 +127,14 @@ subsidies_decision_function <- function(x, varnames){
   return(list(
     NPV_subsidies = NPV_subsidies,
     NPV_no_subsidies = NPV_no_subsidies,
-    NPV_subsidies = NPV_subsidies - NPV_no_subsidies,
+    NPV_decision_do = NPV_subsidies - NPV_no_subsidies,
     Cashflow_decision_do = net_subsidies - net_no_subsidies
   ))
     
 }
     
 
-
+# mcSimulation ####
 
 mcSimulation_results <- decisionSupport::mcSimulation(
   estimate = decisionSupport::estimate_read_csv("Input_new.csv", sep=";"),
@@ -143,24 +143,84 @@ mcSimulation_results <- decisionSupport::mcSimulation(
   functionSyntax = "plainNames"
 )
 
+
+mcSimulation_results
+
+# Plots ####
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
                                     vars = c("NPV_subsidies", "NPV_no_subsidies"),
                                     method = 'smooth_simple_overlay', 
-                                    base_size = 7) 
+                                    colors = c("#FF0000", "#00FF00","#56B4E9" )) 
+
+
+decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
+                                    vars = c("NPV_subsidies", "NPV_no_subsidies"),
+                                    method = 'boxplot')
+
+
+
+
+
+
+
+
 
     
-    
+#Projection to Latent Structures (PLS) analysis ####
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+pls_result <- plsr.mcSimulation(object = mcSimulation_results,
+                               resultName = names(mcSimulation_results$y)[3], ncomp = 1)
+
+
+plot_pls(pls_result, input_table = input_table, threshold = 0.8)
+
+
+
+
+
+
+
+
+# Value of Information (VoI) analysis ####
+
+
+mcSimulation_table <- data.frame(mcSimulation_results$x, mcSimulation_results$y[1:3])
+mcSimulation_table
+
+#EVPI ####
+evpi <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_subsidies")
+evpi
+
+
+plot_evpi(evpi, decision_vars = "NPV_decision_do")
+
+
+
+#Cashflow ####
+plot_cashflow(mcSimulation_object = mcSimulation_results, cashflow_var_name = "Cashflow_decision_do", x_axis_name = "Timeline Years",)
+
+help("plot_cashflow")
+
+
+
+
+decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
+                                    vars = "NPV_decision_do",
+                                    method = 'boxplot_density')
+
+
+
+
+
+
+
+compound_figure(mcSimulation_object = mcSimulation_results, input_table = input_table, plsrResults = pls_result, EVPIresults = evpi, decision_var_name = "NPV_decision_do", cashflow_var_name = "Cashflow_decision_do", base_size = 7)
+
+
+
+
+
+
+
     
     
