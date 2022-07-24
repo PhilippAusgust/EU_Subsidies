@@ -33,7 +33,8 @@ subsidies_decision_function <- function(x, varnames){
   costs_conversation          <- vv(costs_cns_tillage, var_CV,n_years)
   costs_realize_small_fields  <- vv(more_cultivation_costs,var_CV, n_years)
   costs_own_effort            <- vv(own_efforts_costs,var_CV, n_years)
-  
+  costs_water_protec          <- vv(costs_water_protection,var_CV, n_years)
+  costs_cultivation           <- vv(more_cultivation_costs,var_CV,n_years)
   
   net_subsidies <- rep(0, n_years)
   net_no_subsidies <- rep(0, n_years)
@@ -93,7 +94,7 @@ subsidies_decision_function <- function(x, varnames){
     
     if(get_eu_subsidies){
       # Kosten, die durch Auflagen der Subventionen entstehen, wenn diese erhalten werden   
-      opportunity_costs_subsedies <- (costs_shut_down+costs_conversation+costs_realize_small_fields) * farming_area_
+      opportunity_costs_subsedies <- (costs_shut_down+costs_conversation+costs_realize_small_fields+costs_water_protec+costs_cultivation) * farming_area_
     }
     
       
