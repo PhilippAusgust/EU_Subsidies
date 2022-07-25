@@ -199,6 +199,12 @@ Let's first take a look at the input data to be passed to the model function.
 The table shown here is only an excerpt. The column in which each variable is described is not represented. Furthermore, only the first 6 rows are shown. The complete input table can be found in the git repository, which you can find [here](https://github.com/PhilippAusgust/EU_Subsidies).
 
 
+### Data sources
+
+In order to feed the input table with meaningful data, an extensive research was conducted in this thesis. 
+The current production costs were taken into account. 
+the website of the ["Landwirtschaftskammer Schleswig - Hollstein"](https://www.lksh.de/fileadmin/PDFs/Landwirtschaft/Markt/Kalkulationsdaten_Pflanzenproduktion_Wirtschaftsjahr_2018_20019.pdf) and the ["Landwirtschaftskammer Nordrhein- Westfahlen"](https://www.landwirtschaftskammer.de/foerderung/hinweise/agrarreform-2023.htm). Current prices for wheat, seeds and fertilizers were taken from the website ["boerse-online.eu"](https://www.boerse-online.de/rohstoffe/weizenpreis). In addition, several active farmers were interviewed. 
+
 
 
 
