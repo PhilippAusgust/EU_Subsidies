@@ -2,7 +2,9 @@
 title: "EU Subsidies/ No EU Subsidies"
 author: ""
 date: ""
-output: html_document
+output: 
+  html_document: 
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -15,7 +17,7 @@ When the European Community was founded, the six founding countries agreed on
 a common agricultural policy (CAP). The first agricultural subsidies, which mostly reached
 producers indirectly in the form of intervention prices or export refunds, began to
 flow in 1962. Since 1992, price supports have been gradually converted into direct
-payments and disbursed in a manner decoupled from the crops (Garzon 2006). 
+payments and disbursed in a manner decoupled from the crops (*Garzon*, 2006). 
 
 
 ## Current situation
@@ -23,19 +25,24 @@ payments and disbursed in a manner decoupled from the crops (Garzon 2006).
 The current period is marked by many major crises at the international level. Agriculture is also affected by this. 
 Currently, the CAP is being fundamentally reformed.
 The aim of the new CAP is to make agriculture sustainable and climate-friendly. Thus, a new common CAP should contribute to the set environmental and climate goals of the European Union.
-Small farms are also to be strengthened. Furthermore, the EU member states should be given more flexibility to adapt their domestic agricultural policies to local conditions. To this end, new decisions on direct payments will come into force as of January 2023. 
+Small farms are also to be strengthened. Furthermore, the EU member states should be given more flexibility to adapt their domestic agricultural policies to local conditions. To this end, new decisions on direct payments will come into force as of January 2023 (*Díaz* et al., 2021). 
 
 ### Change of the subsidy payment
 
 
-In order to achieve the newly set goals, there will be a change in the payment of EU subsidies. Until now, only the requirements of the fertilizer regulation in Germany had to be met in order to receive subsidies.  Environmental requirements and thus agronomic measures were not linked to the payment of subsidies. Also, the basis premiums were reduced by almost 60%. 
+In order to achieve the newly set goals, there will be a change in the payment of EU subsidies. Until now, only the requirements of the fertilizer regulation in Germany had to be met in order to receive subsidies.  Environmental requirements and thus agronomic measures were not linked to the payment of subsidies. From 2023, the "basic premium" is expected to fall from the current €170/ha to around €150/ha. Furthermore, from then on, conditions must be met in order for the basic premium to be paid out (*Bockholt*, 2022).  
+
+* In the future, 4% of the arable land must be shut down. 
+* 3 m border strips to water bodies / 
+* no bare soil in winter / conservation tillage
+* crop rotation
 
 
 
 ### Principle of conditionality
 
 In the new CAP, the principle of "conditionality" is planned. 
-This means that in the future, EU subsidies will only be paid out if conditions are fulfilled. These conditions can severely restrict the farmer in his agronomic possibilities and can have a strong impact on the farm's success. 
+This means that in the future, EU subsidies will only be paid out if conditions are fulfilled. These conditions can severely restrict the farmer in his agronomic possibilities and can have a strong impact on the farm's success (*Díaz* et al., 2021). 
 
 
 
@@ -50,34 +57,144 @@ Likewise, the yield can change quickly due to a changing climate and the yield l
 Furthermore, the prices that farmers pay for their products are not stable and are subject to sharp price jumps. Here, a look at the past shows that prices can rise or fall within a very short period of time. 
 Depending on the uncertainties described here, mandatory measures that must be implemented in the future in order to receive subsidies will have a differentiated impact on the success of each farm. 
 
-## Flow Chart 
+## Modulation 
+
+The chart below outlines a scenario in which the farmer chooses to receive the base subsidies and the subsidies paid for a maximum field size. In the flowchart, the selected subsidies are represented by the fields "basic_subsidies" and "small_fields_subsidies" highlighted in gray. In order to receive both subsidies, costs are incurred under the principle of conditionality. These costs are represented additively by the fields "basic_subsidies_costs" and "costs_field_area_<_5_ha" colored in pink. The individual costs that arise for the respective subsidy through conditions in the form of arable restrictions are shown explicitly by the orange fields.  
+
+For the basic subsidies, indirect costs result from the shutdown of arable land (costs_4%_shutdown), costs for a careful and conservative soil cultivation (costs_consevation_tillage) and costs, which result from measures for water protection.
+
+In addition to the individual costs that are incurred depending on the type of subsidy requested, there are general costs that must be considered. On the one hand, many farmers make use of an advisory service offered by the Chamber of Agriculture. Here, farmers are advised and supported in filling out the applications. 
+Furthermore, it must be taken into account that the farmer must make a high proportion of his own contribution and his own working time in order to complete an application for subsidies. 
+This results in further costs that are directly incurred by the submission of an application for subsidies. These are presented by the fields "costs_consulting" and "costs_own_effort".
+
+__Flowchart 1:__ 
+
+```{r, echo=FALSE}
+library(DiagrammeR)
+
+DiagrammeR("
+           
+           graph LR
+           
+
+           
+           BB(basic_subsidies)-->S(Subsidies)
+           
+           MM(small_fields_subsidies)-->S
+           B(basic_subsidies_costs)-->BB
+           
+           r(costs_4%_shutdown)-.->B
+           k(costs_conversation_tillage)-.->B
+           ww(costs_water_protection)-.-> B
+           
+           
+           M(costs_field_area_<_5_ha)-->MM
+           ef(costs_more_cultivation)-->M
+           
+           
+           CC(costs_consulting) -.-> S
+           OE(costs_own_effort)-.-> S
+
+           
+           style S fill:lightgreen, stroke:#0000ff,stroke-width:3px;
+           style r fill:orange, stroke:#333,stroke-width:2px;
+           style k fill:orange, stroke:#333,stroke-width:2px;
+           style ww fill:orange, stroke:#333,stroke-width:2px;
+           
+           style ef fill:orange, stroke:#333,stroke-width:2px;
+           style CC fill:orange, stroke:#333,stroke-width:2px;
+           style OE fill:orange, stroke:#333,stroke-width:2px;
+           style M fill:pink, stroke:#333,stroke-width:2px;
+           style B fill:pink, stroke:#333,stroke-width:2px;
+           style BB fill:lightgrey, stroke:#333,stroke-width:2px;
+           style MM fill:lightgrey, stroke:#333,stroke-width:2px;
+           
+           style costs_for_eu_subsidies    fill:orange;
+          
+           ")
 
 
-The chart below outlines a scenario in which the farmer chooses to receive the base premium and the premium paid for a maximum field size. 
-In order to receive both premiums, costs are incurred under the principle of conditionality. This cost is incurred through agronomic cuts. The costs are colored orange. Red colored are the costs, which can be regarded as general production costs.
-
-__This section illustrates this:__ 
-
-![](./Chart_1.jpeg)
-
-Red colored are the costs, which can be regarded as general production costs.
-
-
-## Model function
-
-The model function is executed twice. Once the receipt of subsidies is simulated and the expected profit is calculated under the premise that subsidies are paid and the necessary cuts and their costs are accepted. In the second variant, only the profit to be expected if no subsidies are paid is calculated. It should be noted here that in this case there are also no costs for the subsidies
 
 
 
 
 
-![](./Plot_concept.jpeg)
 
 
+```
+
+Furthermore, general production costs are incurred. These also have an impact on operating profit.  These extend the flow chart by the heading costs. The general production costs are shown with red fields.
+In summary, it can be noted that the production costs and the subsidies, affect the income. The subsidies cause costs by the principle of the conditionality first, before they can generate profit for it later also. 
+Finally, the yield and the current grain market price must be included in the overall calculation.  This is shown via the fields "market_price" and "yield" in flowchart 2.
 
 
+__Flowchart 2:__
+```{r, echo = FALSE}
 
-#### Input Data 
+DiagrammeR("
+           
+           graph LR
+           I(income)-->A(NPV_EU_Subsidies)
+
+           S(Subsidies) -->I
+           BB(basic_subsidies)-->S
+           
+           MM(small_fields_subsidies)-->S
+           B(costs_basic_subsidies)-->BB
+           
+           r(costs_4%_shutdown)-.->B
+           k(costs_conversation_tillage)-.->B
+           ww(costs_water_protection)-.-> B
+     
+           
+           M(costs_field_area_<_5_ha)-->MM
+           ef(costs_more_cultivation)-.->M
+           
+           
+           CC(costs_consulting) -.-> S
+           OE(costs_own_effort)-.-> S
+           
+           p(market_price)-->I
+           YI(Yield)-->I
+           
+           
+           
+           
+           
+           c(costs)-->I
+           
+           saf(costs_seeding_and_fertilizer)-->c
+           cp(costs_pesticides)-->c
+           cm(costs_machinery)-->c
+           hi(costs_hail_insurance)-->c
+           
+
+           
+           style S fill:lightgreen, stroke:#0000ff,stroke-width:3px;
+           style r fill:orange, stroke:#333,stroke-width:2px;
+           style k fill:orange, stroke:#333,stroke-width:2px;
+           style ww fill:orange, stroke:#333,stroke-width:2px;
+           style ef fill:orange, stroke:#333,stroke-width:2px;
+           style CC fill:orange, stroke:#333,stroke-width:2px;
+           style OE fill:orange, stroke:#333,stroke-width:2px;
+           style M fill:pink, stroke:#333,stroke-width:2px;
+           style B fill:pink, stroke:#333,stroke-width:2px;
+           style BB fill:lightgrey, stroke:#333,stroke-width:2px;
+           style MM fill:lightgrey, stroke:#333,stroke-width:2px;
+           style saf fill:orangered, stroke:#333,stroke-width:2px;
+           style cp fill:orangered, stroke:#333,stroke-width:2px;
+           style cm fill:orangered, stroke:#333,stroke-width:2px;
+           style c  fill:orangered, stroke:#333,stroke-width:2px;
+           style hi fill:orangered, stroke:#333,stroke-width:2px;
+           style costs_for_eu_subsidies    fill:orange;
+           style general_production_costs    fill:orangered;
+           ")
+
+
+```
+
+
+## Input Data 
 Let's first take a look at the input data to be passed to the model function. 
 The table shown here is only an excerpt. The column in which each variable is described is not represented. Furthermore, only the first 6 rows are shown. The complete input table can be found in the git repository, which you can find [here](https://github.com/PhilippAusgust/EU_Subsidies).
 
@@ -86,19 +203,17 @@ The table shown here is only an excerpt. The column in which each variable is de
 
 
 ```{r,echo=FALSE}
-library(readr)
-ddd <- read.csv2("Input_new.csv")
 library(readxl)
-
 mod <- read_excel("Modified_Table.xlsx")
-
-head(mod)
+knitr::kable(head(mod), "pipe")
 ```
 
 
+## Model function
 
+The model function is executed twice. Once the receipt of subsidies is simulated and the expected profit is calculated under the premise that subsidies are paid and the necessary cuts and their costs are accepted. In the second variant, only the profit to be expected if no subsidies are paid is calculated. It should be noted here that in this case there are also no costs for the subsidies
 
-## Build Function
+### Build Function
 
 
 ```{r}
@@ -131,6 +246,8 @@ subsidies_decision_function <- function(x, varnames){
   costs_conversation          <- vv(costs_cns_tillage, var_CV,n_years)
   costs_realize_small_fields  <- vv(more_cultivation_costs,var_CV, n_years)
   costs_own_effort            <- vv(own_efforts_costs,var_CV, n_years)
+  costs_water_protec          <- vv(costs_water_protection,var_CV, n_years)
+  costs_cultivation           <- vv(more_cultivation_costs,var_CV,n_years)
   
   # define arrays for the final result of Net Present Value
   
@@ -206,8 +323,8 @@ subsidies_decision_function <- function(x, varnames){
     
     if(get_eu_subsidies){
       # calculate arable costs incurred due to requirements for receiving EU subsidies.
-      opportunity_costs_subsedies <- ((costs_shut_down+costs_conversation+costs_realize_small_fields)
-                                      *farming_area_)
+      opportunity_costs_subsedies <- ((costs_shut_down+costs_conversation+costs_realize_small_fields
+                                       +costs_water_protec+costs_cultivation)*farming_area_)
     
     }
     
@@ -251,6 +368,37 @@ subsidies_decision_function <- function(x, varnames){
   ))
     
 }
+
+
+```
+## Monte Carlo Simulation 
+
+```{r}
+
+mcSimulation_results <- decisionSupport::mcSimulation(
+  estimate = decisionSupport::estimate_read_csv("Input_new.csv", sep=";"),
+  model_function = subsidies_decision_function,
+  numberOfModelRuns = 1e3, #run 1,000 times
+  functionSyntax = "plainNames"
+)
+
+```
+
+
+
+### Visualisierung /Result 
+
+
+
+
+```{r}
+
+decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
+                                    vars = c("NPV_subsidies", "NPV_no_subsidies"),
+                                    method = 'smooth_simple_overlay', 
+                                    colors = c("#FF0000", "#00FF00","#56B4E9" )) 
+
+
 
 
 ```
