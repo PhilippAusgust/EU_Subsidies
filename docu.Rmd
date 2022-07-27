@@ -5,7 +5,16 @@ date: ""
 output: 
   html_document: 
     toc: yes
+    toc_float: yes
+    numbered: yes
+    theme: journal
+
 ---
+<style>
+body {
+text-align: justify}
+</style>
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -382,6 +391,10 @@ subsidies_decision_function <- function(x, varnames){
 
 ## Monte Carlo Simulation 
 
+
+After the model function has been created, it is passed to the function "mCSimulation" from the decision Support Package. Furthermore, the input table is transferred. Note that in this case the input table is a csv file and the semicolon is used as a separator. This must be adapted in the estimate_decison_read_csv function. The simulation is run a total of 1000 times.
+
+
 ```{r}
 
 mcSimulation_results <- decisionSupport::mcSimulation(
@@ -395,21 +408,24 @@ mcSimulation_results <- decisionSupport::mcSimulation(
 
 
 
-### Visualisierung /Result 
+## Result 
+
+### Outcome Distribution 
 
 
 
-
-```{r}
-
+```{r, echo=FALSE, fig.align='left', fig.cap="**Fig. 1** income comparison over six years with and without subsidies   ", }
+  
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
                                     vars = c("NPV_subsidies", "NPV_no_subsidies"),
                                     method = 'smooth_simple_overlay', 
-                                    base_size = 7)
+                                    base_size = 11)
 
 ```
 
-```{r}
+
+
+```{r, echo=FALSE, fig.align='left', fig.cap="**Fig. 2** income comparison over six years with and without subsidies Boxplot   ",}
 
 
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
@@ -418,9 +434,12 @@ decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results,
                                     method = 'boxplot')
 ```
 
+Figures 1 and 2 show the hypothetical farm yields of a 100 ha arable farm producing only wheat. 
+As mentioned above, only the so-called "basic subsidies" and the subsidies for a maximum area of five hectares are taken into account in this example.Figure 1 and Figure 2 show the same facts. Only Figure 2 shows this via a boxplot. The individual probability of hitting one of the 1000 simulated farm profits is not indicated in Figure 2.  It can be seen in both figures that the operating profit is higher with subsidies. 
 
+### Net Present Value (NPV)
 
-```{r}
+```{r, echo =FALSE, fig.align='left', fig.cap= "**Fig.3** Net Present Value of Subsidies"}
 
 
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
@@ -429,45 +448,76 @@ decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results,
 ```
 
 
-```{r}
+
+
+
+
+The npv returns the net benefit of the EU subsidies simulated here. This is consistently positive in most cases. However, there are exceptions in which a loss occurs when the decision is made in favour of subsidies. However, this is not consistently seen in the simulations. The graphs and results generated in the Markdown html file are different each time and sometimes vary greatly. For over 99 percent of simulated npv's of EU subsidies, these yield a profit of 55,000 euros on average. 
+
+
+### Cash flow each year 
+
+```{r, echo=FALSE, fig.cap= "**Fig.4** Cashflow each year"}
 library(decisionSupport)
-
 plot_cashflow(mcSimulation_object = mcSimulation_results, cashflow_var_name = "Cashflow_decision_do", x_axis_name = "Timeline Years",)
-
 ```
 
+Looking at the cash flow on Figure 4, it can be clearly seen that if the decision is made in favor of EU subsidies, annual additional revenues of approx. 7000 - 10000 euros can be expected. 
+The fluctuation range is relatively small. 
 
-```{r}
+### Variable Importance in Projection (VIP)
+
+```{r, echo=FALSE}
 
 pls_result <- plsr.mcSimulation(object = mcSimulation_results,
                   resultName = names(mcSimulation_results$y)[3], ncomp = 1)
 ```
 
 
-
-
-```{r}
-
+```{r, echo=FALSE}
 input_table <- read.csv("Input_new.csv", sep=";")
-plot_pls(pls_result, input_table = input_table, threshold = 0)
-
 ```
+
+```{r, echo =FALSE,fig.align='left', fig.cap="**Fig. 5** VIP"}
+plot_pls(pls_result, input_table = input_table, threshold = 0)
+```
+Next we look at the 
+Variable Importance in the Projection (VIP). Figure 5 shows the VIP on the abscissa and the labels of the variables from the input table on the ordinate. 
+The VIP indicates either a positive or a negative correlation. In this example, it means the following. The highest VIP is caused by the label "Euro/ha Costs for shut down of 4 percent of the farm´s arable land". The color of the bar is red. This means that the higher the cutbacks/costs for shutting down 4% of the farm`s arable land, the more likely people are to decide against subsidies. On the other hand, the label "Euro/ha costs for machinery" can be used. Here the color of the bar is green. This can be interpreted to mean that the higher the costs for machinery, the more likely the farmers are to opt for EU subsidies. 
+
+
+
+
+
+
+## Value of Information (VoI) / Expected Value of Perfect Information (EVPI)
+
 
 
 
 ```{r}
 mcSimulation_table <- data.frame(mcSimulation_results$x, mcSimulation_results$y[1:3])
 evpi <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_subsidies")
+
+```
+
+Finally, it should be considered what benefit the information from the simulation generates. Decisions are often not always clear-cut.  It is often possible to make a decision that gives you an advantage one time but puts you at a disadvantage the next time under only minimally different conditions. In such a situation, it can help to identify influencing variables that can have a particularly strong impact on the decision. These variables have the highest value for a decision and one should devote further research to these influencing variables. 
+In this example, it can already be guessed in advance that one always has an advantage if one decides in favour of EU subsidies. 
+Therefore, no major research should be done on the biggest influencing variables. In this way, costs can be saved. 
+The concept described here can also be calculated by calculating the EVPI. 
+This tells us how much the perfect information on the three largest influencing variables is worth. 
+If this is negative, no further research should be carried out on the three largest influencing variables. 
+In summary, this means that in this example, the decision should always be made to receive EU subsidies. 
+ 
+
+```{r}
+
 plot_evpi(evpi, decision_vars = "NPV_subsidies_do")
 
 ```
 
 
-```{r}
-
-compound_figure(mcSimulation_object = mcSimulation_results, input_table = input_table, plsrResults = pls_result, EVPIresults = evpi, decision_var_name = "NPV_subsidies_do", cashflow_var_name = "Cashflow_decision_do", base_size = 7)
 
 
-```
 
-
+## References
