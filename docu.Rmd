@@ -22,59 +22,52 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## History of EU Subsidies 
 
-When the European Community was founded, the six founding countries agreed on
-a common agricultural policy (CAP). The first agricultural subsidies, which mostly reached
-producers indirectly in the form of intervention prices or export refunds, began to
-flow in 1962. Since 1992, price supports have been gradually converted into direct
+When the European UNION was founded, the six founding countries agreed on
+a common agricultural policy (CAP). In 1962, the first agricultural subsidies were introduced, reaching producers in the form of intervention prices or export refunds. Since 1992, price supports have been gradually transformed into direct
 payments and disbursed in a manner decoupled from the crops (*Garzon*, 2006). 
 
 
-## Current situation
+## Current Situation
 
-The current period is marked by many major crises at the international level. Agriculture is also affected by this. 
+The current period is overshadowed by numerous major crises at the international level. Agriculture is also affected by this. 
 Currently, the CAP is being fundamentally reformed.
-The aim of the new CAP is to make agriculture sustainable and climate-friendly. Thus, a new common CAP should contribute to the set environmental and climate goals of the European Union.
+The aim of the new CAP is to make agriculture more sustainable and climate-friendly. It should contribute to the set environmental and climate goals of the European Union.
 Small farms are also to be strengthened. Furthermore, the EU member states should be given more flexibility to adapt their domestic agricultural policies to local conditions. To this end, new decisions on direct payments will come into force as of January 2023 (*Díaz* et al., 2021). 
 
-### Change of the subsidy payment
+### Change of the Subsidy Payment
 
 
-In order to achieve the newly set goals, there will be a change in the payment of EU subsidies. Until now, only the requirements of the fertilizer regulation in Germany had to be met in order to receive subsidies.  Environmental requirements and thus agronomic measures were not linked to the payment of subsidies. From 2023, the "basic premium" is expected to fall from the current €170/ha to around €150/ha. Furthermore, from then on, conditions must be met in order for the basic premium to be paid out (*Bockholt*, 2022; *Michalczyk*, 2022).  
+To achieve the new goals, there will be a change in the payment of EU subsidies. Until now, only the requirements on the fertilizer regulation in Germany had to be met to receive subsidies.  Environmental requirements and thus agronomic measures were not linked to the payment of subsidies. From 2023, the "basic premium" is expected to fall from the current €170/ha to around €150/ha. Furthermore, from then on, conditions must be met for the basic premium to be paid out (*Bockholt*, 2022; *Michalczyk*, 2022).  
 
-* In the future, 4% of the arable land must be shut down. 
-* 3 m border strips to water bodies / 
+* In the future, 4% of the arable land must be shut down 
+* 3 m border strips to water bodies because of water protection/ 
 * no bare soil in winter / conservation tillage
 * crop rotation
 
 
 
-### Principle of conditionality
+### Principle of Conditionality
 
 In the new CAP, the principle of "conditionality" is planned. 
-This means that in the future, EU subsidies will only be paid out if conditions are fulfilled. These conditions can severely restrict the farmer in his agronomic possibilities and can have a strong impact on the farm's success (*Díaz* et al., 2021). 
+TIt states that, in the future, EU subsidies will only be paid, if the conditions are fulfilled. These conditions can severely restrict the farmers in their agronomic possibilities and can have a strong impact on the success of the farms (*Díaz* et al., 2021). 
 
 
 
 ## Uncertainties
 
-
-With the reduction of subsidies combined with new costly regulations, many farmers are currently asking themselves whether there are still advantages to using subsidies. 
+With the reduction of subsidies combined with new costly regulations, the question arose whether there are still advantages to using subsidies. 
 To answer this question, many factors, often unpredictable, must be considered. 
-
-For one thing, production conditions change very quickly. Prices for fertilizer, machinery, seeds, crop protection, fuel are currently subject to extreme fluctuations.  These can be subject to very rapid changes due to wars or crises such as the Corona pandemic. 
-Likewise, the yield can change quickly due to a changing climate and the yield level is not stable.  
-Furthermore, the prices that farmers pay for their products are not stable and are subject to sharp price jumps. Here, a look at the past shows that prices can rise or fall within a very short period of time. 
-Depending on the uncertainties described here, mandatory measures that must be implemented in the future in order to receive subsidies will have a differentiated impact on the success of each farm. 
+The production conditions change very quickly. Prices for fertilizer, machinery, seeds, crop protection and fuel are currently subject to extreme fluctuations.  These factors can be affected by rapid changes such as an economic crisis or other factors, for example, COVID-19. 
+Likewise, the yield can change quickly due to a changing climate and therefore create an unstable yield level.  
+As a result, the prices of the products are exposed to significant price fluctuations and are therefore unstable. Depending on the uncertainties described, mandatory measures will have to be implemented in the future in order to receive subsidies. These may have different effects on the success of the individual farms.
 
 ## Modulation 
 
-The chart below outlines a scenario in which the farmer chooses to receive the base subsidies and the subsidies paid for a maximum field size. In the flowchart, the selected subsidies are represented by the fields "basic_subsidies" and "small_fields_subsidies" highlighted in gray. In order to receive both subsidies, costs are incurred under the principle of conditionality. These costs are represented additively by the fields "basic_subsidies_costs" and "costs_field_area_<_5_ha" colored in pink. The individual costs that arise for the respective subsidy through conditions in the form of arable restrictions are shown explicitly by the orange fields.  
+The points below outline a scenario in which the farmer chooses to receive the base subsidies and the subsidies paid for the maximum field size. In the flowchart, the selected subsidies are represented by the fields "basic_subsidies" and "small_fields_subsidies", highlighted in gray. To receive both subsidies, the costs arise according to the principle of conditionality. These costs are represented additively by the fields "basic_subsidies_costs" and "costs_field_area_<_5_ha" colored in pink. The individual costs for the respective subsidy through conditions in the form of arable restrictions are shown by the orange fields.  
 
-For the basic subsidies, indirect costs result from the shutdown of arable land (costs_4%_shutdown), costs for a careful and conservative soil cultivation (costs_consevation_tillage) and costs, which result from measures for water protection.
+For the basic subsidies, indirect costs resulting from the shutdown of arable land (costs_4%_shutdown), costs for  careful and conservative soil cultivation (costs_consevation_tillage) and costs, resulting from measures for water protection.
 
-In addition to the individual costs that are incurred depending on the type of subsidy requested, there are general costs that must be considered. On the one hand, many farmers make use of an advisory service offered by the Chamber of Agriculture. Here, farmers are advised and supported in filling out the applications. 
-Furthermore, it must be taken into account that the farmer must make a high proportion of his own contribution and his own working time in order to complete an application for subsidies. 
-This results in further costs that are directly incurred by the submission of an application for subsidies. These are presented by the fields "costs_consulting" and "costs_own_effort".
+In addition to the costs incurred by the type of subsidy requested, there are other costs to be considered. On the one hand, many farmers make use of an advisory service offered by the Chamber of Agriculture. Through this service, farmers are provided with advice and assistance in completing the applications. Another important consideration is the work and time commitment that farmers must dedicate in order to apply for subsidies. This results in additional costs that are directly related to the request for funding. These are presented by the fields "costs_consulting" and "costs_own_effort".
 
 __Flowchart 1:__ 
 
@@ -204,14 +197,13 @@ DiagrammeR("
 
 
 ## Input Data 
-Let's first take a look at the input data to be passed to the model function. 
-The table shown here is only an excerpt. The column in which each variable is described is not represented. Furthermore, only the first 6 rows are shown. The complete input table can be found in the git repository, which you can find [here](https://github.com/PhilippAusgust/EU_Subsidies).
+The input data that are passed to the model function are shown in this table. However, the table shown here is only an excerpt. The column of the variable description is not displayed and only the first 6 rows are presented on the graph. The complete input table can be found in the git repository, which you can find [here](https://github.com/PhilippAusgust/EU_Subsidies).
 
 
-### Data sources
+### Data Sources
 
-In order to feed the input table with meaningful data, an extensive research was conducted in this thesis. 
-The current production costs were taken into account the website of the [Landwirtschaftskammer Schleswig-Hollstein](https://www.lksh.de/fileadmin/PDFs/Landwirtschaft/Markt/Kalkulationsdaten_Pflanzenproduktion_Wirtschaftsjahr_2018_20019.pdf) and the [Landwirtschaftskammer Nordrhein-Westfahlen](https://www.landwirtschaftskammer.de/foerderung/hinweise/agrarreform-2023.htm). Current prices for wheat, seeds and fertilizers were taken from the website [boerse-online.eu](https://www.boerse-online.de/rohstoffe/weizenpreis). In addition several active farmers were interviewed. In addition, several active farmers were interviewed. This revealed that each farmer has a very different attitude towards subsidies. For some farmers the threshold to fulfill the conditions to receive EU subsidies is relatively low. For others however even filling out the relevant applications is an extreme hurdle. In summary, the majority of farmers indicated that they will apply for the subsidies although for some it is a big effort.
+In order to obtain meaningful data for the input table, extensive research was conducted in this thesis. 
+The current production costs were taken into account the website of the [Landwirtschaftskammer Schleswig-Hollstein](https://www.lksh.de/fileadmin/PDFs/Landwirtschaft/Markt/Kalkulationsdaten_Pflanzenproduktion_Wirtschaftsjahr_2018_20019.pdf) and the [Landwirtschaftskammer Nordrhein-Westfahlen](https://www.landwirtschaftskammer.de/foerderung/hinweise/agrarreform-2023.htm). Current prices for wheat, seeds and fertilizers were taken from the website [boerse-online.eu](https://www.boerse-online.de/rohstoffe/weizenpreis). In addition, several active farmers were interviewed. The interview results showed that revealed that each farmer has a different attitude towards subsidies. For some farmers, the threshold to fulfill the conditions to receive EU subsidies is relatively low while other farmers already face difficulties when filling out the relevant applications. To conclude, most farmers indicate that they will apply for the subsidies, even if it requires a lot of effort.
 
 
 
@@ -222,9 +214,9 @@ knitr::kable(head(mod), "pipe", caption = "Input Table")
 ```
 
 
-## Model function
+## Model Function
 
-The model function is executed twice. Once the receipt of subsidies is simulated and the expected profit is calculated under the premise that subsidies are paid and the necessary cuts and their costs are accepted. In the second variant, only the profit to be expected if no subsidies are paid is calculated. It should be noted here that in this case there are also no costs for the subsidies. The exact execution of the model function can be found in the comments in the code.
+The model function is run twice. Once the receipt of subsidies is simulated and the expected profit is calculated under the premise that subsidies are paid and the necessary cuts and their costs are accepted. In the second variant, only the profit to be expected if no subsidies are paid is calculated. It should be noted that in this case there is no costs for subsidies. The exact execution of the model function can be found in the comments in the code.
 
 ### Build Function
 
@@ -392,7 +384,7 @@ subsidies_decision_function <- function(x, varnames){
 ## Monte Carlo Simulation 
 
 
-After the model function has been created, it is passed to the function "mCSimulation" from the decision Support Package. Furthermore, the input table is transferred. Note that in this case the input table is a csv file and the semicolon is used as a separator. This must be adapted in the estimate_decison_read_csv function. The simulation is run a total of 1000 times.
+After the model function has been created, it is passed to the function "mCSimulation" from the decision Support Package. Furthermore, the input table is transferred. Note that in this case the input table is a csv file and the semicolon is used as a separator. This must be adapted in the estimate_decison_read_csv function. The simulation is run 1000 times.
 
 
 ```{r}
@@ -414,7 +406,7 @@ mcSimulation_results <- decisionSupport::mcSimulation(
 
 
 
-```{r, echo=FALSE, fig.align='left', fig.cap="**Fig. 1** income comparison over six years with and without subsidies   ", }
+```{r, echo=FALSE, fig.align='left', fig.cap="**Fig. 1** Income comparison over six years with and without subsidies   ", }
   
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
                                     vars = c("NPV_subsidies", "NPV_no_subsidies"),
@@ -425,7 +417,7 @@ decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results,
 
 
 
-```{r, echo=FALSE, fig.align='left', fig.cap="**Fig. 2** income comparison over six years with and without subsidies Boxplot   ",}
+```{r, echo=FALSE, fig.align='left', fig.cap="**Fig. 2** Income comparison over six years with and without subsidies boxplot   ",}
 
 
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
@@ -435,11 +427,11 @@ decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results,
 ```
 
 Figures 1 and 2 show the hypothetical farm yields of a 100 ha arable farm producing only wheat. 
-As mentioned above, only the so-called "basic subsidies" and the subsidies for a maximum area of five hectares are taken into account in this example.Figure 1 and Figure 2 show the same facts. Only Figure 2 shows this via a boxplot. The individual probability of hitting one of the 1000 simulated farm profits is not indicated in Figure 2.  It can be seen in both figures that the operating profit is higher with subsidies. 
+As mentioned above, only the "basic subsidies" and the subsidies for a maximum area of five hectares are considered in this example.Figure 1 and 2 show the same facts. Only Figure 2 shows this via a boxplot. The individual probability of hitting one of the 1000 simulated farm profits is not indicated in Figure 2.  It can be seen in both figures that the operating profit is higher with subsidies. 
 
 ### Net Present Value (NPV)
 
-```{r, echo =FALSE, fig.align='left', fig.cap= "**Fig.3** Net Present Value of Subsidies"}
+```{r, echo =FALSE, fig.align='left', fig.cap= "**Fig.3** NPV of Subsidies"}
 
 
 decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results, 
@@ -452,7 +444,7 @@ decisionSupport::plot_distributions(mcSimulation_object = mcSimulation_results,
 
 
 
-The npv returns the net benefit of the EU subsidies simulated here. This is consistently positive in most cases. However, there are exceptions in which a loss occurs when the decision is made in favour of subsidies. However, this is not consistently seen in the simulations. The graphs and results generated in the Markdown html file are different each time and sometimes vary greatly. For over 99 percent of simulated npv's of EU subsidies, these yield a profit of 55,000 euros on average. 
+The NPV returns the net benefit of the EU subsidies simulated here. This is consistently positive in most cases. However, there are exceptions in which a loss occurs when the decision is made in favour of subsidies. The results of this paper don’t show a consistency of this exceptions. The graphs and results generated in the Markdown html file differ and sometimes vary widely. Over 99 percent of simulated npv's of EU subsidies result in an average profit of 55000 euros. 
 
 
 ### Cash flow each year 
@@ -462,7 +454,7 @@ library(decisionSupport)
 plot_cashflow(mcSimulation_object = mcSimulation_results, cashflow_var_name = "Cashflow_decision_do", x_axis_name = "Timeline Years",)
 ```
 
-Looking at the cash flow on Figure 4, it can be clearly seen that if the decision is made in favor of EU subsidies, annual additional revenues of approx. 7000 - 10000 euros can be expected. 
+Looking at the cash flow on Figure 4, it shows that if the decision is made in favor of EU subsidies, annual additional revenues of approx. 7000 - 10000 euros can be expected. 
 The fluctuation range is relatively small. 
 
 ### Variable Importance in Projection (VIP)
@@ -481,9 +473,9 @@ input_table <- read.csv("Input_new.csv", sep=";")
 ```{r, echo =FALSE,fig.align='left', fig.cap="**Fig. 5** VIP"}
 plot_pls(pls_result, input_table = input_table, threshold = 0)
 ```
-Next we look at the 
-Variable Importance in the Projection (VIP). Figure 5 shows the VIP on the abscissa and the labels of the variables from the input table on the ordinate. 
-The VIP indicates either a positive or a negative correlation. In this example, it means the following. The highest VIP is caused by the label "Euro/ha Costs for shut down of 4 percent of the farm´s arable land". The color of the bar is red. This means that the higher the cutbacks/costs for shutting down 4% of the farm`s arable land, the more likely people are to decide against subsidies. On the other hand, the label "Euro/ha costs for machinery" can be used. Here the color of the bar is green. This can be interpreted to mean that the higher the costs for machinery, the more likely the farmers are to opt for EU subsidies. 
+
+Figure 5 shows the VIP on the abscissa and the labels of the variables from the input table on the ordinate. 
+The VIP indicates either a positive or a negative correlation. The highest VIP is seen when looking at the first label caused by the label "Euro/ha Costs for shut down of 4 percent of the farm´s arable land". The color of the bar is red. Consequently, the higher the costs of setting aside 4% of farmland, the more likely people will choose not to receive subsidies. The label "Euro/ha costs for machinery" can also be used. It is shown in the colour green. This can suggest that the higher the costs of machinery, the more likely farmers are to use EU subsidies. 
 
 
 
