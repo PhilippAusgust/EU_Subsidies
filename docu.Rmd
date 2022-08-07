@@ -8,6 +8,8 @@ output:
     toc_float: yes
     numbered: yes
     theme: journal
+bibliography: ref.bib
+
 
 ---
 <style>
@@ -20,11 +22,12 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ## History of EU Subsidies 
 
 When the European UNION was founded, the six founding countries agreed on
 a common agricultural policy (CAP). In 1962, the first agricultural subsidies were introduced, reaching producers in the form of intervention prices or export refunds. Since 1992, price supports have been gradually transformed into direct
-payments and disbursed in a manner decoupled from the crops (*Garzon*, 2006). 
+payments and disbursed in a manner decoupled from the crops @garzon. 
 
 
 ## Current Situation
@@ -32,12 +35,12 @@ payments and disbursed in a manner decoupled from the crops (*Garzon*, 2006).
 The current period is overshadowed by numerous major crises at the international level. Agriculture is also affected by this. 
 Currently, the CAP is being fundamentally reformed.
 The aim of the new CAP is to make agriculture more sustainable and climate-friendly. It should contribute to the set environmental and climate goals of the European Union.
-Small farms are also to be strengthened. Furthermore, the EU member states should be given more flexibility to adapt their domestic agricultural policies to local conditions. To this end, new decisions on direct payments will come into force as of January 2023 (*Díaz* et al., 2021). 
+Small farms are also to be strengthened. Furthermore, the EU member states should be given more flexibility to adapt their domestic agricultural policies to local conditions. To this end, new decisions on direct payments will come into force as of January 2023 @diaz2021environmental. 
 
 ### Change of the Subsidy Payment
 
 
-To achieve the new goals, there will be a change in the payment of EU subsidies. Until now, only the requirements on the fertilizer regulation in Germany had to be met to receive subsidies.  Environmental requirements and thus agronomic measures were not linked to the payment of subsidies. From 2023, the "basic premium" is expected to fall from the current €170/ha to around €150/ha. Furthermore, from then on, conditions must be met for the basic premium to be paid out (*Bockholt*, 2022; *Michalczyk*, 2022).  
+To achieve the new goals, there will be a change in the payment of EU subsidies. Until now, only the requirements on the fertilizer regulation in Germany had to be met to receive subsidies.  Environmental requirements and thus agronomic measures were not linked to the payment of subsidies. From 2023, the "basic premium" is expected to fall from the current €170/ha to around €150/ha. Furthermore, from then on, conditions must be met for the basic premium to be paid out @agrar_heute;  @Top_Agrar.  
 
 * In the future, 4% of the arable land must be shut down 
 * 3 m border strips to water bodies because of water protection/ 
@@ -49,7 +52,7 @@ To achieve the new goals, there will be a change in the payment of EU subsidies.
 ### Principle of Conditionality
 
 In the new CAP, the principle of "conditionality" is planned. 
-TIt states that, in the future, EU subsidies will only be paid, if the conditions are fulfilled. These conditions can severely restrict the farmers in their agronomic possibilities and can have a strong impact on the success of the farms (*Díaz* et al., 2021). 
+TIt states that, in the future, EU subsidies will only be paid, if the conditions are fulfilled. These conditions can severely restrict the farmers in their agronomic possibilities and can have a strong impact on the success of the farms @diaz2021environmental. 
 
 
 
@@ -475,17 +478,9 @@ plot_pls(pls_result, input_table = input_table, threshold = 0)
 ```
 
 Figure 5 shows the VIP on the abscissa and the labels of the variables from the input table on the ordinate. 
-The VIP indicates either a positive or a negative correlation. The highest VIP is seen when looking at the first label caused by the label "Euro/ha Costs for shut down of 4 percent of the farm´s arable land". The color of the bar is red. Consequently, the higher the costs of setting aside 4% of farmland, the more likely people will choose not to receive subsidies. The label "Euro/ha costs for machinery" can also be used. It is shown in the colour green. This can suggest that the higher the costs of machinery, the more likely farmers are to use EU subsidies. 
-
-
-
-
-
+The VIP indicates either a positive or a negative correlation. The highest VIP is seen when looking at the first label caused by the label "Euro/ha Costs for shut down of 4 percent of the farm´s arable land". The color of the bar is red. Consequently, the higher the costs of setting aside 4% of farmland, the more likely people will choose not to receive subsidies. If a label has a green background, this means that the higher the costs caused by this label, the more likely it is that EU subsidies will be chosen.
 
 ## Value of Information (VoI) / Expected Value of Perfect Information (EVPI)
-
-
-
 
 ```{r}
 mcSimulation_table <- data.frame(mcSimulation_results$x, mcSimulation_results$y[1:3])
@@ -493,13 +488,11 @@ evpi <- multi_EVPI(mc = mcSimulation_table, first_out_var = "NPV_subsidies")
 
 ```
 
-Finally, it should be considered what benefit the information from the simulation generates. Decisions are often not always clear-cut.  It is often possible to make a decision that gives you an advantage one time but puts you at a disadvantage the next time under only minimally different conditions. In such a situation, it can help to identify influencing variables that can have a particularly strong impact on the decision. These variables have the highest value for a decision and one should devote further research to these influencing variables. 
-In this example, it can already be guessed in advance that one always has an advantage if one decides in favour of EU subsidies. 
-Therefore, no major research should be done on the biggest influencing variables. In this way, costs can be saved. 
-The concept described here can also be calculated by calculating the EVPI. 
-This tells us how much the perfect information on the three largest influencing variables is worth. 
-If this is negative, no further research should be carried out on the three largest influencing variables. 
-In summary, this means that in this example, the decision should always be made to receive EU subsidies. 
+Finally, it should be considered what benefit the information from the simulation provides. Decisions are often ambiguous.  It is often possible to make a decision that gives you an advantage once, but creates a disadvantage the next time under only minimally different conditions. In these situations, it can help to identify the influencing variables that have a particularly strong impact on the decision and re-examine the initial decision process and alternate it. These variables have the highest value for a decision, and further research should be conducted on these influencing variables. In this example, it can be assumed in advance that there is an advantage in opting for EU subsidies.  
+Therefore, there is no need to conduct further research on the most important influencing variables and no further expenses are incurred. 
+The concept described here can also be calculated the EVPI. 
+The EVPI represents the value that should be applied to obtain information that is optimal to judge whether to decide for or against subsidies @decisionSupport.
+In this case it is obvious that in any case the subsidies should be applied for. Therefore, an extensive information research is not necessary. 
  
 
 ```{r}
@@ -511,5 +504,5 @@ plot_evpi(evpi, decision_vars = "NPV_subsidies_do")
 
 
 
-
 ## References
+
