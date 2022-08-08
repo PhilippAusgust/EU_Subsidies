@@ -26,15 +26,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ## History of EU Subsidies 
 
 When the European UNION was founded, the six founding countries agreed on
-a common agricultural policy (CAP). In 1962, the first agricultural subsidies were introduced, reaching producers in the form of intervention prices or export refunds. Since 1992, price supports have been gradually transformed into direct
-payments and disbursed in a manner decoupled from the crops @garzon. 
+a common agricultural policy (CAP). In 1962, the first agricultural subsidies were introduced, reaching producers as intervention prices or export refunds. Since 1992, price supports have been gradually transformed into direct
+payments and disbursed decoupled from crops @garzon. 
 
 
 ## Current Situation
 
-The current period is overshadowed by numerous major crises at the international level. Agriculture is also affected by this. 
+The current period is overshadowed by numerous crises at the international level. Agriculture is also affected by this. 
 Currently, the CAP is being fundamentally reformed.
-The aim of the new CAP is to make agriculture more sustainable and climate-friendly. It should contribute to the set environmental and climate goals of the European Union.
+The aim of the new CAP is to make agriculture more sustainable and climate and environmentally friendly. It should contribute to the set environmental and climate goals of the European Union.
 Small farms are also to be strengthened. Furthermore, the EU member states should be given more flexibility to adapt their domestic agricultural policies to local conditions. To this end, new decisions on direct payments will come into force as of January 2023 @diaz2021environmental. 
 
 ### Change of the Subsidy Payment
@@ -43,16 +43,16 @@ Small farms are also to be strengthened. Furthermore, the EU member states shoul
 To achieve the new goals, there will be a change in the payment of EU subsidies. Until now, only the requirements on the fertilizer regulation in Germany had to be met to receive subsidies.  Environmental requirements and thus agronomic measures were not linked to the payment of subsidies. From 2023, the "basic premium" is expected to fall from the current €170/ha to around €150/ha. Furthermore, from then on, conditions must be met for the basic premium to be paid out @agrar_heute;  @Top_Agrar.  
 
 * In the future, 4% of the arable land must be shut down 
-* 3 m border strips to water bodies because of water protection/ 
-* no bare soil in winter / conservation tillage
-* crop rotation
+* 3 m border strips to water bodies because of water protection 
+* No bare soil in winter / conservation tillage
+* Crop rotation
 
 
 
 ### Principle of Conditionality
 
 In the new CAP, the principle of "conditionality" is planned. 
-TIt states that, in the future, EU subsidies will only be paid, if the conditions are fulfilled. These conditions can severely restrict the farmers in their agronomic possibilities and can have a strong impact on the success of the farms @diaz2021environmental. 
+It states that in the future, EU subsidies will only be paid, if the conditions are fulfilled. These conditions can severely restrict the farmers in their agronomic possibilities and can have a strong impact on the success of the farms @diaz2021environmental. 
 
 
 
@@ -62,7 +62,7 @@ With the reduction of subsidies combined with new costly regulations, the questi
 To answer this question, many factors, often unpredictable, must be considered. 
 The production conditions change very quickly. Prices for fertilizer, machinery, seeds, crop protection and fuel are currently subject to extreme fluctuations.  These factors can be affected by rapid changes such as an economic crisis or other factors, for example, COVID-19. 
 Likewise, the yield can change quickly due to a changing climate and therefore create an unstable yield level.  
-As a result, the prices of the products are exposed to significant price fluctuations and are therefore unstable. Depending on the uncertainties described, mandatory measures will have to be implemented in the future in order to receive subsidies. These may have different effects on the success of the individual farms.
+As a result, the prices of the products are exposed to significant price fluctuations and are therefore unstable. Depending on the uncertainties described, mandatory measures will have to be implemented in the future to receive subsidies. These may have different effects on the success of the individual farms.
 
 ## Modulation 
 
@@ -128,8 +128,8 @@ DiagrammeR("
 
 ```
 
-Furthermore, general production costs are incurred. These also have an impact on operating profit.  These extend the flow chart by the heading costs. The general production costs are shown with red fields.
-In summary, it can be noted that the production costs and the subsidies, affect the income. The subsidies cause costs by the principle of the conditionality first, before they can generate profit for it later also. 
+Furthermore, the general production costs are incurred which also have an impact on the operating profit.  The flowchart is extended by the heading costs and the general production costs are shown in. It provides a clear overview of how production costs and subsidies affect income.
+ The subsidies cause costs by the principle of conditionality before they can generate profit. 
 Finally, the yield and the current grain market price must be included in the overall calculation.  This is shown via the fields "market_price" and "yield" in flowchart 2.
 
 
@@ -205,8 +205,8 @@ The input data that are passed to the model function are shown in this table. Ho
 
 ### Data Sources
 
-In order to obtain meaningful data for the input table, extensive research was conducted in this thesis. 
-The current production costs were taken into account the website of the [Landwirtschaftskammer Schleswig-Hollstein](https://www.lksh.de/fileadmin/PDFs/Landwirtschaft/Markt/Kalkulationsdaten_Pflanzenproduktion_Wirtschaftsjahr_2018_20019.pdf) and the [Landwirtschaftskammer Nordrhein-Westfahlen](https://www.landwirtschaftskammer.de/foerderung/hinweise/agrarreform-2023.htm). Current prices for wheat, seeds and fertilizers were taken from the website [boerse-online.eu](https://www.boerse-online.de/rohstoffe/weizenpreis). In addition, several active farmers were interviewed. The interview results showed that revealed that each farmer has a different attitude towards subsidies. For some farmers, the threshold to fulfill the conditions to receive EU subsidies is relatively low while other farmers already face difficulties when filling out the relevant applications. To conclude, most farmers indicate that they will apply for the subsidies, even if it requires a lot of effort.
+In order to obtain meaningful data for the input table, extensive research was conducted. 
+The current production costs were taken into account the website of the [Landwirtschaftskammer Schleswig-Hollstein](https://www.lksh.de/fileadmin/PDFs/Landwirtschaft/Markt/Kalkulationsdaten_Pflanzenproduktion_Wirtschaftsjahr_2018_20019.pdf) and the [Landwirtschaftskammer Nordrhein-Westfahlen](https://www.landwirtschaftskammer.de/foerderung/hinweise/agrarreform-2023.htm). Current prices for wheat, seeds and fertilizers were taken from the website [boerse-online.eu](https://www.boerse-online.de/rohstoffe/weizenpreis). In addition, several active farmers were interviewed. The interview results revealed that each farmer has a different attitude towards subsidies. For some farmers, the threshold to fulfil the conditions to receive EU subsidies is relatively low while other farmers already face difficulties when filling out the relevant applications. To conclude, most farmers indicate that they will apply for the subsidies, even if it requires a lot of effort.
 
 
 
@@ -219,7 +219,7 @@ knitr::kable(head(mod), "pipe", caption = "Input Table")
 
 ## Model Function
 
-The model function is run twice. Once the receipt of subsidies is simulated and the expected profit is calculated under the premise that subsidies are paid and the necessary cuts and their costs are accepted. In the second variant, only the profit to be expected if no subsidies are paid is calculated. It should be noted that in this case there is no costs for subsidies. The exact execution of the model function can be found in the comments in the code.
+The model function is run twice. Once the receipt of subsidies is simulated and the expected profit is calculated under the premise that subsidies are paid and the necessary cuts and their costs are accepted. In the second variant, only the profit to be expected if no subsidies are paid is calculated. It should be noted that in this case there are no costs for subsidies. The exact execution of the model function can be found in the comments in the code.
 
 ### Build Function
 
