@@ -1,6 +1,6 @@
 ---
 title: "EU Subsidies/ No EU Subsidies"
-author: "Lars Achten, Philipp Münker 2972572, Leonard Overberg 2982296"
+author: "Lars Achten 2988768, Philipp Münker 2972572, Leonard Overberg 2982296"
 date: "`r Sys.Date()`"
 output: 
   html_document: 
